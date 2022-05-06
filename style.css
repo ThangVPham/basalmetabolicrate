@@ -1,0 +1,135 @@
+* {
+    margin:0px;
+    padding:0px;
+    
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.head{
+    background-color: rgb(12,134,158);
+    height:50px;
+    padding-top:15px;   
+}
+.head h1{
+    position:absolute;
+    left:10%;
+    color:white;
+}
+.wrapper{
+    background:url(bg.jpg);
+    width:100%;
+    height:111.1vh;
+}
+.content{
+    padding-left: 20px;
+    padding-top:0px;
+    padding-bottom:10px;
+    margin:auto;
+    max-width: 980px;
+    background-color: rgb(162, 223, 223, 0.95);
+    height:109vh;
+}
+.content img{
+    width:102%; 
+    height:200px; 
+    position:relative; 
+    left:-20px;
+}
+.grid-wrapper{ 
+    display:grid;
+    grid-template-columns: 50% 50%;  
+    
+}
+.content table{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+table, th, td{
+    border: 1px solid black;
+}
+.button{
+  background-color: #343834;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.grid-wrapper form{
+    display:block;
+    padding:10px 10px;
+    width: 450px;;
+    border-width: 4px;
+    border-radius: 10px;
+    border-style: outset;
+    margin:auto;
+}
+footer{
+    display:block;
+    font-size:small;
+    align-items: center;
+    margin:0;
+    text-align: center;
+    background-color: rgb(12,134,158);
+    padding-top:10px;
+    padding-bottom:5px;
+    color:white;
+}
+a, u{
+    text-decoration: none;
+    color:white;
+}
+@media screen and (max-width:980px){
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .head{
+        
+        height:75px;
+        padding: 0px; 
+        width:100%
+    }
+    .content{
+        width:101%;
+        padding: 0px;
+        height:170vh;
+    }
+    .content img{
+        padding:0px;              
+        right: 0px;
+        padding-right:0px;      
+    }
+    .grid-wrapper{
+        display: block;
+        width:85%;
+    }
+    .grid-wrapper form{
+        width: 300px;
+        margin-bottom:20px;
+    }
+    .wrapper{
+        height:100vh;
+    }    
+    footer{
+        width:100%;
+    }
+}
+@media screen and (max-width: 560px){
+    .content{
+        width:101%;
+        padding: 0px;
+        height:250vh;
+    }
+    footer{
+        display:block;
+        position: relative;
+        bottom: 0px;
+    }
+}

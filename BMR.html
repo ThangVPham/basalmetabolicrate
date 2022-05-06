@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">    
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image" href="run.jpg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class = "head">
+            <h1>Daily Calorie Intake Calculator</h1>
+        </header>               
+            <div class="wrapper">                                                                                          
+                    <div class="content">
+                        <img src="run.jpg" alt="runner">
+                        <div class="grid-wrapper">
+                            <form>     
+                                <h3>Your basic Information</h3><br>
+                                <input type="button" id="metric" class="button" value="Metric" onclick="metricSelection()">        
+                                <input type="button" id="imperial" class="button"value="Imperial"onclick="imperialSelection()"><br><br>
+                                <b>Sex:</b> &emsp;&emsp;
+                                Man <input type="radio"  name="sex" value="man">&emsp;&emsp;
+                                Woman <input type="radio"  name="sex" value="woman"> <br><br>
+                                <b>Age:</b>  &emsp;&nbsp;<input type="text" id="age" size="3"><br><br>
+                                <b>Weight:</b> <input type="text" id="weight" size="3" placeholder="kg"><br><br>
+                                <b>Height:</b> &nbsp;<input type="text" id="height" size="3" placeholder="cm"><br><br>
+                                <b>Physical Activity:</b> &emsp; Sedentary <input type="radio" id="lifestyle" name="lifestyle" value="sedentary"> &emsp;
+                                Active <input type="radio" id=lifestyle" name="lifestyle" value="active"> &emsp;
+                                Vigorous <input type="radio" id="lifestyle" name="lifestyle" value="vigorous"><br><br>
+                                <button type="button" onclick="Calculate()">Calculate</button><br><br>                              
+                                <label><b>Your BMR (kcal): </b></label><p id="output" style="display:inline;"></p><br>
+                                <label> <b>Total Energy Expenditure (kcal):</b>  </label><p id="TEE" style="display:inline;"></p>
+                            </form>
+                            <div>
+                                <br>
+                                <h3>What is Basal Metabolic Rate?</h3><br>
+                                <p>Basal metabolic rate is a measurement of the number of calories needed to perform your body's most basic (basal) functions, like breathing, circulation and cell production. BMR is most accurately measured in a lab setting under very restrictive conditions. </p><br>
+                                <p>Resting metabolic rate is a measurement of the number of calories that your body burns at rest. Resting metabolic rate is usually measured in the morning before you eat or exercise and after a full night of restful sleep. </p><br>
+                                <p>As you can see, the definitions of RMR and BMR are almost identical. Your resting metabolic rate should be an accurate estimate of your basal metabolic rate. Because the terms are similar, some fitness and weight loss experts use both terms to describe the same thing. But the term "resting metabolic rate" is more common.</p><br>
+                            </div>
+                        </div>
+                        <div><br>
+                            <h3>Equation used to Calculate BMR</h3> <br>
+                            <p>The Harris-Benedict Equation is used to estimate basal metabolicrate. The equation is as followed:</p><br>
+                            <p>Metric:</p>
+                            <ul style="padding-left: 50px;">
+                                <li>Men: BMR = 66.5 + ( 13.75 × weight in kg ) + ( 5.003 × height in cm ) – ( 6.755 × age in years )</li>
+                                <li>Women: 655 + ( 9.563 × weight in kg ) + ( 1.850 × height in cm ) – ( 4.676 × age in years )</li>
+                            </ul>
+                            <p>Imperial:</p>
+                            <ul style="padding-left: 50px;">
+                                <li>Men: 66 + ( 6.2 × weight in pounds ) + ( 12.7 × height in inches ) – ( 6.76 × age in years )</li>
+                                <li>Women: 655 + ( 4.35 × weight in pounds ) + ( 4.7 × height in inches ) - ( 4.7 × age in years )
+                                </li>
+                            </ul><br>
+                            <p>While the original paper does not attempt to translate BMR into total energy expenditure (TEE), a BMR result may be multiplied by a factor that approximates an individual's physical activity level (PAL) to estimate their TEE. The following table enables approximation of an individual's daily TEE based on some example lifestyles</p>
+                        </div><br>
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <th>Lifestyle</th>
+                                    <th>Example</th>
+                                    <th>PAL</th>
+                                    <th>Calculation</th>
+                                </tr>
+                                <tr>
+                                    <td>Sedentary or light activity</td>
+                                    <td>Office worker getting little or no exercise</td>
+                                    <td>1.53</td>
+                                    <td>BMR x 1.53</td>
+                                </tr>
+                                <tr>
+                                    <td>Active or moderately active</td>
+                                    <td>Construction worker or person running one hour daily</td>
+                                    <td>1.76</td>
+                                    <td>BMR x 1.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Vigorously active</td>
+                                    <td>Agricultural worker (non mechanized) or person swimming two hours daily</td>
+                                    <td>2.25</td>
+                                    <td>BMR x 2.25</td>
+                                </tr>
+                            </table>   
+                        </div>
+                    </div>                                                 
+        </article> 
+        <script src="assignment1.js"></script>
+    </body>
+    <footer>
+        ©Copyright 2021 - Thang Pham - 300940831 - Client-side Web Development<br>
+        References: <a  href="https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation">Harris-Benedict BMR</a><br>
+        <a href="https://www.verywellfit.com/what-is-bmr-or-basal-metabolic-rate-3495380">Verywellfit</a> 
+    </footer>
+</html>
